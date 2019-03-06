@@ -1,1 +1,1 @@
-web:gunicorn:tvseries.app:app
+web: gunicorn tvseries.app:app
