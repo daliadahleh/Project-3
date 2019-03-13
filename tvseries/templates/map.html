@@ -3,18 +3,26 @@
 
 <head>
   <meta charset="utf-8">
-  <title>TV Series Search</title>
+  <title>Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="../static/css/style.css">
-  <!-- Leaflet CSS & JS -->
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
- integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
- crossorigin=""/>
- <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
- integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
- crossorigin=""></script>
+  
+   <!-- Leaflet JS & CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+
+   <!-- d3 JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.js"></script>
+
+   <!-- Marker Cluster JS & CSS -->
+   <script src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+   <!-- Our CSS -->
+   <link rel="stylesheet" href="static/css/style.css">
+
 </head>
 
 <body>
@@ -22,25 +30,32 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">TV Series
-            <img class="nav-camera" src="../static/images/Camera.svg">
+          <a class="navbar-brand" href="/index">TV Series
+            <img class="nav-camera" alt='Camera Film' src="/static/images/Camera.svg">
           </a>
         </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right navbar-right-custom">
+          <li><a href="/description1">Description</a></li>
+          <li><a href="/map">Map</a></li>
+          <li><a href="/chart">Interactive Chart</a></li>
+        </ul>
       </div>
     </nav>
-    <!-- The div where we will inject our map -->
- <div id="map"></div>
- 
+    
+    <div class="container">
+        <div id="map"> </div>
+    </div> 
 
-     <footer class="footer">
+    <footer class="footer">
       <span class="bottom">TV series</span>
     </footer>
+
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.js"></script>
- <!-- API key -->
- <script type="text/javascript" src="../static/js/config.js"></script>
- <!-- Our JS -->
- <script type="text/javascript" src="../static/js/logic.js"></script>
+
+   <script src="/static/js/config.js"></script>
+   <script src="/static/js/logic.js"></script>
+
 </body>
 
 </html>
